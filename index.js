@@ -2,8 +2,11 @@ const express = require('express')
 const app = express()
 const port = 3000
 
+app.set('view engine','ejs';)
+
 app.get('/', (req, res) => {
-  res.send('Hello World, from zeh Express!')
+  var title = 'Our Home Page';
+  res.render('index',{title,title});
 })
 
 app.listen(port, () => {
